@@ -1,25 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using JobPosting.Models;
+using System.Collections.Generic;
 
 namespace JobPosting.Controllers
 {
-  public class JobPostingController : Controller
+  public class JobController : Controller
   {
-    [HttpGet("/jobs")]
+    [HttpGet("/job")]
     public ActionResult Index()
     {
       List<Job> allJobs = Job.GetAll();
       return View(allJobs);
     }
 
-    [HttpGet("/jobs/new")]
+    [HttpGet("/job/new")]
     public ActionResult CreatePost()
     {
       return View();
     }
 
-    [HttpPost("/jobs")]
+    [HttpPost("/job")]
     public ActionResult Create(string title, string description, string location, int salary)
     {
       Job newPosting = new Job(title, description, location, salary);
