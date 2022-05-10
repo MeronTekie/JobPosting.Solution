@@ -6,17 +6,19 @@
   <title>Jobs Here</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
 </head>
 <body>
       <form action="/job" method="post">
-        <label for="title">Job Title Here:</label>
-        <input id="title" name="title" type="text">
-        <label for="description">Job Description Here:</label>
-        <input id="description" name="description" type="text">
-        <label for="location">Job Location Here:</label>
-        <input id="location" name="location" type="text">
-        <label for="salary">Job Salary Here:</label>
-        <input id="salary" name="salary" type="number">
-        <button type="submit">Submit</button>
+        <label for="title"></label>
+        <input id="title" name="title" type="text" placeholder="Job Title">
+        <label for="description"></label>
+        <input id="description" name="description" type="text" placeholder="Job Description">
+        <label for="location"></label>
+        <input id="location" name="location" type="text" placeholder="Job Location">
+        <label for="salary"></label>
+        <input id="salary" name="salary" type="number" placeholder="Salary Per Year">
+        <button type="submit" class="btn btn-dark">Post!</button>
+      </form>
 </body>
 </html>

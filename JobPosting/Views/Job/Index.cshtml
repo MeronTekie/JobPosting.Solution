@@ -5,6 +5,7 @@
   <title>Jobs Here</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
 </head>
 <body>
   @using JobPosting.Models;
@@ -16,17 +17,10 @@
     <p>There are no jobs currently posted.</p>
   }
   <ul>
-    @foreach (Job jobTitle in Model)
+    @foreach (Job job in Model)
     {
-      <li>@jobTitle.JobTitle</li>
-      <ul>
-      @foreach (Job job in Model)
-    {
-      <li>@job.JobDescription</li>
-      <li>@job.JobLocation</li>
-      <li>@job.JobSalary</li>
-    }
-    </ul>
+      <li>The job title is: @job.JobTitle.ToUpper() <br>
+      The basic duties are: @job.JobDescription. The position is based out of @job.JobLocation, and the starting salary is: @job.JobSalary dollars per year.</li>
     }
   </ul>
   <a href='/job/new'>Post a Job Today!</a>
